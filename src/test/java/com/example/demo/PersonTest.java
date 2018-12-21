@@ -22,12 +22,12 @@ import static org.junit.Assert.assertThat;
 public class PersonTest {
 
     @Test
-    public void 나이체크() {
+    public void 나이양수체크() {
         ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
         Validator validator = validatorFactory.getValidator();
 
         Person person = Person.builder()
-                .age(-32)
+                .age(32)
                 .name("arthur")
                 .build();
 
