@@ -8,11 +8,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 public class PersonRequest {
 
+    @NotNull(message = "정확한 카테고리값을 입력해주세요.")
     private CategoryType categoryType;
 
     @Valid
