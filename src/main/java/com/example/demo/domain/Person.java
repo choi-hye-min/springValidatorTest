@@ -1,12 +1,15 @@
 package com.example.demo.domain;
 
+import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 @Data
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Person {
 
     @NotEmpty(message = "이름을 입력해주세요.")
